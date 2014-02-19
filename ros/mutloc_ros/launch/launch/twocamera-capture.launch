@@ -1,0 +1,16 @@
+<launch>
+	<!--node pkg="rosbag" type="record" name="rosbag_record" 
+			args="-o $(find mutloc_ros)/data/twocamera-capture /camera0/image_color /camera0/image_rect_color /camera/rgb/image_color /camera/rgb/image_rect_color"/-->
+	<include file="$(find mutloc_ros)/launch/asus-xtion.launch" />
+	<group ns="camera0" >   
+		<include file="$(find mutloc_ros)/launch/camera_c920_logitech.launch" />
+	</group>
+    <node pkg="image_view" type="image_view" name="$(anon image_view)" >
+	    <remap from="image" to="/camera/rgb/image_rect_color"/>
+	    <param name="filename_format" value="$(arg outdir)/mobile%04d.png" />
+    </node>
+    <node pkg="image_view" type="image_view" name="$(anon image_view)" >
+	    <remap from="image" to="/camera0/image_rect_color"/>
+	    <param name="filename_format" value="$(arg outdir)/static%04d.png" />
+    </node>
+</launch>

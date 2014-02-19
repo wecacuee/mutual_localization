@@ -1,0 +1,10 @@
+<launch>
+    <!--include file="$(find mutloc_ros)/launch/detector_and_localizer.launch" /-->
+	<node pkg="tf" type="static_transform_publisher" name="world_to_cam" 
+		args="0 0 0 0 0 0  map camera_rgb_optical_frame 10" />
+	<!--node name="tilesexperiment" pkg="mutloc_ros" type="tilesexperiment.py" args="$(find mutloc_ros)/data_blikinglights/out.txt"/-->
+	<node name="rqt_rviz" pkg="rqt_gui" type="rqt_gui" args="-s rviz --args -d $(find mutloc_ros)/launch/justtransform.vcg.rviz " />
+	<!--include file="$(find mutloc_ros)/launch/artk.launch"/-->
+	<!-- this should be the last launch file, since the last launch file changes default machine-->
+	<include file="$(find mutloc_ros)/launch/recordfrom2robots.launch"/>
+</launch>

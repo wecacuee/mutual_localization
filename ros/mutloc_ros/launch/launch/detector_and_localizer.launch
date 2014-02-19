@@ -1,0 +1,10 @@
+<launch>
+	<group ns="turtlebot03" >
+		<node pkg="mutloc_ros" type="detector.py" name="turtlebot03_detector" output="screen"/>
+	</group>
+	<group ns="turtlebot04" >
+		<node pkg="mutloc_ros" type="detector.py" name="turtlebot04_detector" output="screen"/>
+	</group>
+    <node pkg="mutloc_ros" type="localize_from_detections.py" name="localize_from_detections" 
+            args="$(find mutloc_ros)/data_blinkinglights/bags/calib.yml" output="screen"/>
+</launch>

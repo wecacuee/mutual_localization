@@ -1,0 +1,6 @@
+<launch>
+	<node name="$(anon dynparam)" pkg="dynamic_reconfigure"
+		type="dynparam" args="set_from_parameters camera/driver">
+		<param name="depth_registration" type="boolean" value="false" />
+	</node> 
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find mutloc_ros)/launch/camera_c920_logitech.launch" />
+  <node name="calibrate" pkg="camera_calibration" type="cameracalibrator.py" output="screen" >
+	  <remap from="image" to="image_color" />
+	  <remap from="camera" to="/" />
+	  <param name="size" value="8x6" />
+	  <param name="square" value="0.03" />
+  </node>
+</launch>

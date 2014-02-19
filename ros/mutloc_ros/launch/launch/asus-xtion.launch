@@ -1,0 +1,19 @@
+<launch>
+    <include file="$(find openni_launch)/launch/openni.launch" >
+        <arg name="rgb_camera_info_url" value="file:///$(find mutloc_ros)/launch/asus-xtion-640x480-rgb.yml" />
+    </include>
+    <!-- Image output mode for the color/grayscale image Possible values are:
+      SXGA_15Hz (1): 1280x1024@15Hz,
+      VGA_30Hz (2): 640x480@30Hz,
+      VGA_25Hz (3): 640x480@25Hz,
+      QVGA_25Hz (4): 320x240@25Hz,
+      QVGA_30Hz (5): 320x240@30Hz,
+      QVGA_60Hz (6): 320x240@60Hz,
+      QQVGA_25Hz (7): 160x120@25Hz,
+      QQVGA_30Hz (8): 160x120@30Hz,
+      QQVGA_60Hz (9): 160x120@60Hz -->
+    <param name="camera/driver/image_mode" value="2" />
+    <node pkg="image_view" type="image_view" name="$(anon image_view)" >
+        <remap from="image" to="camera/rgb/image_color"/>
+    </node>
+</launch>

@@ -1,0 +1,17 @@
+<package>
+  <description brief="mutloc_ros">
+
+     mutloc
+
+  </description>
+  <author>vikasdhi</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/mutloc</url>
+  <depend package="rospy"/>
+  <depend package="tf"/>
+  <depend package="cv_bridge"/>
+  <!--depend package="camera_calibration"/-->
+</package>
+
+

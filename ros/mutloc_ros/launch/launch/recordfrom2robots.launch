@@ -1,0 +1,15 @@
+<launch>
+	<group ns="turtlebot04" >
+		<include file="$(find mutloc_ros)/launch/kobuki_keyop_xterm.launch"/>
+    </group>
+	<group ns="turtlebot03" >
+		<include file="$(find mutloc_ros)/launch/kobuki_keyop_xterm.launch"/>
+		<machine name="turtlebot03" address="turtlebot-03" user="turtlebot" default="true"/>
+		<include file="$(find mutloc_ros)/launch/eachrobot.launch"/>
+	</group>
+	<group ns="turtlebot04" >
+		<!-- machine with default=true applies to all the nodes after the machine tag -->
+		<machine name="turtlebot04" address="turtlebot-04" user="turtlebot" default="true"/>
+		<include file="$(find mutloc_ros)/launch/eachrobot.launch"/>
+	</group>
+</launch>

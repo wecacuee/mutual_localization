@@ -1,0 +1,6 @@
+<launch>
+	<machine name="turtlebot-04" address="turtlebot-04" user="turtlebot" default="true"/>
+	<group ns="turtlebot04">
+		<include file="$(find openni_launch)/launch/openni.launch"/>
+	</group>
+</launch>

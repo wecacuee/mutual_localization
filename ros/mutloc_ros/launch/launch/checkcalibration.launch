@@ -1,0 +1,6 @@
+<launch>
+	<include file="$(find mutloc_ros)/launch/asus-xtion.launch" />
+	<node pkg="camera_calibration" type="cameracheck.py" name="cameracheck" args="--size 8x6" output="screen" >
+		<remap from="monocular" to="camera/rgb" />
+	</node>
+</launch>

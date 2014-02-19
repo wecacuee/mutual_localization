@@ -1,0 +1,5 @@
+<launch>
+		<include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+		<include file="$(find turtlebot_bringup)/launch/3dsensor.launch" />
+		<!--node pkg="rosbag" type="record" name="record_bag1" args="camera/depth_registered/image_raw camera/depth_registered/camera_info camera/rgb/image_raw camera/rgb/camera_info -o recordblinking" /-->
+</launch>

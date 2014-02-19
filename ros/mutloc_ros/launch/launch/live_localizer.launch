@@ -1,0 +1,15 @@
+<launch>
+    <group ns="camera0" >   
+        <include file="$(find mutloc_ros)/launch/camera_c920_logitech.launch" />
+    </group>
+    <include file="$(find mutloc_ros)/launch/asus-xtion.launch" />
+    <node pkg="mutloc_ros" type="localizer.py" name="localizer" output="screen">
+        <remap from="image0" to="camera0/image_rect_color"/>
+        <remap from="image1" to="camera/rgb/image_rect_color"/>
+    </node>
+
+
+    <!--
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find mutloc_ros)/launch/onlytf.vcg" />
+    -->
+</launch>

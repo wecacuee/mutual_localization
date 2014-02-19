@@ -1,0 +1,10 @@
+<launch>
+	<node pkg="rosbag" type="play" name="rosbag_play" 
+			args="$(arg bagfile)"/>
+	<node pkg="image_view" type="image_view" name="iv0" >
+		<remap from="image" to="/camera0/image_color" />
+	</node>
+	<node pkg="image_view" type="image_view" name="iv1" >
+		<remap from="image" to="/camera/rgb/image_rect_color" />
+	</node>
+</launch>

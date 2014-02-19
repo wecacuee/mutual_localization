@@ -1,0 +1,52 @@
+Background\ ColorB=0
+Background\ ColorG=0
+Background\ ColorR=0
+Camera\ Config=0.234797 0.93897 6.07856 0.79996 -0.081082 -0.345677
+Camera\ Type=rviz::XYOrbitViewController
+Fixed\ Frame=/camera_rgb_optical_frame
+Grid.Alpha=0.5
+Grid.Cell\ Size=1
+Grid.ColorB=0.5
+Grid.ColorG=0.5
+Grid.ColorR=0.5
+Grid.Enabled=1
+Grid.Line\ Style=0
+Grid.Line\ Width=0.03
+Grid.Normal\ Cell\ Count=0
+Grid.OffsetX=0
+Grid.OffsetY=0
+Grid.OffsetZ=0
+Grid.Plane=0
+Grid.Plane\ Cell\ Count=10
+Grid.Reference\ Frame=<Fixed Frame>
+Property\ Grid\ Splitter=578,269
+Property\ Grid\ State=expanded=.Global Options,TF.Enabled,TF.Frames,TF.Frames./camera_depth_frame,TF.Frames./camera_depth_optical_frame,TF.Frames./camera_link,TF.Frames./camera_rgb_frame,TF.Frames./camera_rgb_optical_frame;splitterratio=0.442257
+QMainWindow=000000ff00000000fd0000000300000000000001a7000003a1fc0200000004fb000000100044006900730070006c006100790073010000001d000003a1000000ee00fffffffb0000000a0049006d0061006700650000000354000000b20000000000000000fb0000000c00430061006d006500720061000000026d000000a10000000000000000fb0000000e00430061006d006500720061003200000002e9000000f900000000000000000000000100000131000003a1fc0200000003fb0000001e0054006f006f006c002000500072006f0070006500720074006900650073010000001d000000ea0000006700fffffffb0000000a00560069006500770073010000010d000001c1000000bb00fffffffb0000001200530065006c0065006300740069006f006e01000002d4000000ea0000006700ffffff000000030000064f0000003efc0100000001fb0000000800540069006d006501000000000000064f000002bf00ffffff0000036b000003a100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+TF.All\ Enabled=0
+TF.Enabled=1
+TF.Frame\ Timeout=100
+TF.Marker\ Scale=1
+TF.Show\ Arrows=1
+TF.Show\ Axes=1
+TF.Show\ Names=1
+TF.Update\ Interval=0
+Target\ Frame=<Fixed Frame>
+Tool\ 2D\ Nav\ GoalTopic=move_base_simple/goal
+Tool\ 2D\ Pose\ EstimateTopic=initialpose
+[Display0]
+ClassName=rviz::TFDisplay
+Name=TF
+[Display1]
+ClassName=rviz::GridDisplay
+Name=Grid
+[TF.Frames.]
+camera_depth_frame.Enabled=0
+camera_depth_optical_frame.Enabled=0
+camera_link.Enabled=0
+camera_rgb_frame.Enabled=0
+camera_rgb_optical_frame.Enabled=1
+[Window]
+Height=1026
+Width=1615
+X=-51
+Y=-56
