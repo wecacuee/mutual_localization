@@ -34,22 +34,34 @@ Dependencies
     - sympy
     - yaml
     - unittest
+    - texlive
 
 Installing core dependencies::
 
-    sudo apt-get install python-opencv python-numpy python-sympy python-matplotlib python-scipy python-yaml mayavi2
+    sudo apt-get install libopencv python-opencv python-numpy python-sympy python-matplotlib python-scipy python-yaml mayavi2 texlive
 
 Installing other dependencies::
 
     sudo apt-get install python-unittest python-pyexiv2 python-pygame
 
-Setting python path::
-TODO: set the correct location of hosted code::
+Download
+========
 
-    wget http://www.buffalo.edu/~vikasdhi/mutloc/code.tar.gz -O mutual_localization
-    cd mutual_localization
+Download from `here`_.::
+
+    git clone git@github.com:wecacuee/mutual_localization.git
+
+Get data by using the script in data directory:
+    
+    cd data/
+    python wgetdata.py
+
+Setting python path::
+
+    cd mutual_localization/
     export PYTHONPATH=$PYTHONPATH:`pwd`/lib:`pwd`/src
 
 For the rest of the documentation we will assume that we will assume that we
 are in the ``mutual_localization`` directory.
 
+.. _here: https://github.com/wecacuee/mutual_localization
